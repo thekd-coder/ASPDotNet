@@ -48,7 +48,15 @@ namespace WebAPI.Controllers
                 return BadRequest();
             }
 
+            // Detach the existing tracked entity, if any
+            var existingEntity = await _context.WeatherForecastReports.FindAsync(id);
+            if (existingEntity != null)
+            {
+                _context.Entry(existingEntity).State = EntityState.Detached;
+            }
+
             _context.Entry(weatherForecast).State = EntityState.Modified;
+
 
             try
             {

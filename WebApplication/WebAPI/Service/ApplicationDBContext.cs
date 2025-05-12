@@ -7,7 +7,7 @@ namespace WebApplication.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        public DbSet<WeatherForecast> WeatherForecastReports { get; set; }
+        public virtual DbSet<WeatherForecast> WeatherForecastReports { get; set; }
     }
 }
 
