@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTest", "NUnitTest\NUnitTest.csproj", "{9CDEF8CF-98AC-4119-B5B0-6971380B616C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtAuthDotNet9", "JwtAuthDotNet9\JwtAuthDotNet9.csproj", "{ECBEE37B-9A8B-41CD-80AA-6D2AFF199ED8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9CDEF8CF-98AC-4119-B5B0-6971380B616C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CDEF8CF-98AC-4119-B5B0-6971380B616C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CDEF8CF-98AC-4119-B5B0-6971380B616C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECBEE37B-9A8B-41CD-80AA-6D2AFF199ED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECBEE37B-9A8B-41CD-80AA-6D2AFF199ED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECBEE37B-9A8B-41CD-80AA-6D2AFF199ED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECBEE37B-9A8B-41CD-80AA-6D2AFF199ED8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

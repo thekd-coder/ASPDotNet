@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Immutable;
-using WebAPI.Models;
+using WebAPI.Entities;
 
 namespace WebAPI.Controllers
 {

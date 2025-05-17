@@ -1,4 +1,4 @@
-namespace WebApplication.Models
+namespace WebApplication.Entities
 {
     public class ErrorViewModel
     {
