@@ -41,7 +41,7 @@ namespace JwtAuthDotNet9.Services
 
         public async Task<User?> RegisterAsync(UserDTO request)
         {
-            if(await context.Users.AnyAsync(u => u.Username.ToLower() == request.Username.ToLower()))
+            if(await context.Users.AnyAsync(u => u.Username == request.Username))
                 {
                 return null;
             }

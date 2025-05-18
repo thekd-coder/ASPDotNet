@@ -12,7 +12,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 var connection = builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING");
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING") ?? throw new InvalidOperationException("Connection string 'ApplicationDbContext' not found.")));
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING") ?? throw new InvalidOperationException("Connection string 'ApplicationDbContext' not found."),
+        sqlOptions => sqlOptions.EnableRetryOnFailure())
+    );
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>

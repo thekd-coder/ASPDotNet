@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.JsonPatch;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebAPI.Entities;
@@ -25,6 +26,7 @@ namespace WebAPI.Controllers
         }
 
         // GET: api/WeatherForecastControllerDB/5
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult<WeatherForecast>> GetWeatherForecast(int id)
         {
